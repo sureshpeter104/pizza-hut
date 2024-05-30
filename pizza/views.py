@@ -41,7 +41,7 @@ def pizzas(request):
         if filled_formset.is_valid():
             for form in filled_formset:
                 form.save()
-            note='your order placed successfully...!!!'
+            note='your order placed successfully,have a good dinner...!!!'
         else:
             note= 'sorry Something Went Wrong tryagain'
         return render(request, 'pizza/pizzas.html', {'note':note})
